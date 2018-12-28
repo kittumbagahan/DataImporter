@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scene/AssetBundleServer.unity
+    guid: ae3c0e860c831134384131c3f0ea93fc
+  - enabled: 1
+    path: Assets/Scene/Launcher.unity
+    guid: 0f6ab64a7595d1349b459c64ebd97ae8
+  - enabled: 0
+    path: Assets/Scene/initialization.unity
+    guid: 9af0c6a0750ba184baaa2f4d447a34c5
+  - enabled: 1
+    path: Assets/Scene/others/BookShelf.unity
+    guid: 2bec84230aaa8452e8970deb23c6b47d
+  - enabled: 1
+    path: Assets/Scene/others/ActivitySelection.unity
+    guid: 44ebd0b2ebec84efdbf5666ee3f816cb
+  - enabled: 1
+    path: Assets/Scene/others/ABC_Circus.unity
+    guid: d6a57d2455a402144a0eeb70ddff2ee9
+  - enabled: 1
+    path: Assets/Scene/others/AfterTheRain.unity
+    guid: 0466e9ea2a37d47aaa274eaa93ac885c
+  - enabled: 1
+    path: Assets/Scene/others/ChatWithMyCat.unity
+    guid: 2a00746fd9cef4a5196ed128b23bf7d5
+  - enabled: 1
+    path: Assets/Scene/others/Colors All Mixed Up.unity
+    guid: 85d37baf5d0134a6497e511aa45db070
+  - enabled: 1
+    path: Assets/Scene/others/FavoriteBox.unity
+    guid: edbf1a8d06f0142648847ee5940497ff
+  - enabled: 1
+    path: Assets/Scene/others/JoeyGoesToSchool.unity
+    guid: b0a0d83df40c50b45a7d74fb115ffff8
+  - enabled: 1
+    path: Assets/Scene/others/SoundsFantastic.unity
+    guid: ca50536e4d67e704eba32116e8219fcb
+  - enabled: 1
+    path: Assets/Scene/others/TinaAndJun.unity
+    guid: 0b4e8ccd44002244a9796677f4884c0b
+  - enabled: 1
+    path: Assets/Scene/others/WhatDidYouSee.unity
+    guid: 4a3a2637714e17a4887851d6ff060c25
+  - enabled: 1
+    path: Assets/Scene/others/YummyShapes.unity
+    guid: fc093a1aa6d9ec247888963962f0332d
+  - enabled: 1
+    path: Assets/Scene/activities/ABCCircus_Act1.unity
+    guid: dcfe48dafd5658e429b18e220c8f2e46
+  - enabled: 1
+    path: Assets/Scene/activities/ABCCircus_Act2.unity
+    guid: 3d4cb040c9a1d6749a1c14e4c3b18ca9
+  - enabled: 1
+    path: Assets/Scene/activities/ABCCircus_Act3_listen.unity
+    guid: 46df597891920b448bae8cc169a7f7fa
+  - enabled: 1
+    path: Assets/Scene/activities/ABCCircus_Act4.unity
+    guid: 5353e33e4bd0a4f55a73f5f716d0c84c
+  - enabled: 1
+    path: Assets/Scene/activities/ABCCircus_Act5.unity
+    guid: 72ca49dfb6f30db459e3dc9f9abdd540
+  - enabled: 1
+    path: Assets/Scene/activities/ABCCircus_Act6.unity
+    guid: 325ada057699bbe4abe32bf582ea6333
+  - enabled: 1
+    path: Assets/Scene/activities/afterTheRain_Act1.unity
+    guid: 79b9a68452d20874a95505abe4ffceb0
+  - enabled: 1
+    path: Assets/Scene/activities/afterTheRain_Act2.unity
+    guid: e53d84f4d8705814496303629b71c74d
+  - enabled: 1
+    path: Assets/Scene/activities/afterTheRain_Act3.unity
+    guid: 00ef85e50f228c84d87220d00cffec18
+  - enabled: 1
+    path: Assets/Scene/activities/afterTheRain_Act4.unity
+    guid: be1806a7bdee14c7ea96513fc410af17
+  - enabled: 1
+    path: Assets/Scene/activities/afterTheRain_Act6.unity
+    guid: e5650c9f500d7484a9ff7c744d4dda98
+  - enabled: 1
+    path: Assets/Scene/activities/chatWithCat_Act_1.unity
+    guid: cd682dc6e8a643a44bdcdf1d1a55eb75
+  - enabled: 1
+    path: Assets/Scene/activities/chatWithCat_Act_2.unity
+    guid: f9e4a4387baa83b4fa8887e8f72c5417
+  - enabled: 1
+    path: Assets/Scene/activities/chatWithCat_Act_3.unity
+    guid: 1214eba736dd44def9c060bd1515347a
+  - enabled: 1
+    path: Assets/Scene/activities/chatWithCat_Act_4.unity
+    guid: 10eca84288d84ed459c68991fc797cef
+  - enabled: 1
+    path: Assets/Scene/activities/chatWithCat_Act_5.unity
+    guid: d18f0a08019f634428b888b39647d810
+  - enabled: 1
+    path: Assets/Scene/activities/chatWithCat_Act_6.unity
+    guid: fee0ffb521fcb9c42bb6ecf0d5009ecd
+  - enabled: 1
+    path: Assets/Scene/activities/colorsAllMixedUp_Act_1.unity
+    guid: 2734fe2afc58f2a4db9bb48fc0605631
+  - enabled: 1
+    path: Assets/Scene/activities/colorsAllMixedUp_Act_2.unity
+    guid: c9793e50233b7064d832efc20cee667f
+  - enabled: 1
+    path: Assets/Scene/activities/colorsAllMixedUp_Act_3.unity
+    guid: 0ce8edc7db3754f149bcd23d91aba5e7
+  - enabled: 1
+    path: Assets/Scene/activities/colorsAllMixedUp_Act_4.unity
+    guid: 67006d2dee1034074a650cedf8e70750
+  - enabled: 1
+    path: Assets/Scene/activities/colorsAllMixedUp_Act_5.unity
+    guid: 8802826aa44122a4cb372c9520be4021
+  - enabled: 1
+    path: Assets/Scene/activities/colorsAllMixedUp_Act_6.unity
+    guid: e8a36360d998a5847b8ac8a7755b000e
+  - enabled: 1
+    path: Assets/Scene/activities/colorsAllMixedUp_Act_7.unity
+    guid: 8747f14d9d284410394ebcde80c10d5d
+  - enabled: 1
+    path: Assets/Scene/activities/favBox_Act1_word.unity
+    guid: e0a8b01a950bd3c439a28783a1506492
+  - enabled: 1
+    path: Assets/Scene/activities/favBox_Act2_coloring.unity
+    guid: 246dadb505a1a499587e8aeadac79a61
+  - enabled: 1
+    path: Assets/Scene/activities/favBox_Act3_spotDiff.unity
+    guid: 55e5b91512a586c4c91d13e17d983f68
+  - enabled: 1
+    path: Assets/Scene/activities/favBox_Act4.unity
+    guid: 007805dd0032c2f4b91eb2aba3715de3
+  - enabled: 1
+    path: Assets/Scene/activities/favBox_Act5.unity
+    guid: 1c7360ff0aac34a0e9547527668a6d82
+  - enabled: 1
+    path: Assets/Scene/activities/favbox6_NEW.unity
+    guid: 471b8d52c22fd0546abc572cdaca3101
+  - enabled: 1
+    path: Assets/Scene/activities/JoeyGoesToSchool_Act1.unity
+    guid: 0f9c0feaf8daad240974fb4b7888fc52
+  - enabled: 1
+    path: Assets/Scene/activities/JoeyGoesToSchool_Act2.unity
+    guid: 64c49d51a3234ba4eae33ce3f81c431c
+  - enabled: 1
+    path: Assets/Scene/activities/JoeyGoesToSchool_Act3.unity
+    guid: 36b0b7ba3c8940a4d9e91d132a31da49
+  - enabled: 1
+    path: Assets/Scene/activities/JoeyGoesToSchool_Act4.unity
+    guid: daefecc9a607d4ac2a29ceec6f08a8e4
+  - enabled: 1
+    path: Assets/Scene/activities/JoeyGoesToSchool_Act5.unity
+    guid: 0afefbc3cdf4d8e43afeb9aa169b9538
+  - enabled: 1
+    path: Assets/Scene/activities/JoeyGoesToSchool_Act6.unity
+    guid: f28b6b7cb7544ec4bb4964ccd8f6e2e0
+  - enabled: 1
+    path: Assets/Scene/activities/soundsFantastic_Act1.unity
+    guid: 324bac3f943c6aa4c992a11ea1112c11
+  - enabled: 1
+    path: Assets/Scene/activities/soundsFantastic_Act2.unity
+    guid: 95b97447bef86784d8a2eeca73f8738c
+  - enabled: 1
+    path: Assets/Scene/activities/SoundsFantastic_Act3.unity
+    guid: 3b54742e697fed6478e3d76714b8faf8
+  - enabled: 1
+    path: Assets/Scene/activities/SoundsFantastic_Act4.unity
+    guid: 96f4b0105be97b548a595ed6393c98aa
+  - enabled: 1
+    path: Assets/Scene/activities/SoundsFantastic_Act5.unity
+    guid: 101ac2e1a3a4f2b4f88b6de9026b8206
+  - enabled: 1
+    path: Assets/Scene/activities/SoundsFantastic_Act6.unity
+    guid: 0b2a664d728a0d94b8247360536741a5
+  - enabled: 1
+    path: Assets/Scene/activities/SoundsFantastic_Act7.unity
+    guid: d1442cc119963e649961b018f62efb66
+  - enabled: 1
+    path: Assets/Scene/activities/SoundsFantastic_Act8.unity
+    guid: e73cb225bf86eb045bb75b2831f95caa
+  - enabled: 1
+    path: Assets/Scene/activities/TinaAndJun_Act1.unity
+    guid: 119203b9d995c9545a57a51050cf2b2f
+  - enabled: 1
+    path: Assets/Scene/activities/TinaAndJun_Act2.unity
+    guid: 3c17414c701b25a42bc86b5a5701e37c
+  - enabled: 1
+    path: Assets/Scene/activities/TinaAndJun_Act3.unity
+    guid: e01056ba1419efa4ab8a481b85d2bd38
+  - enabled: 1
+    path: Assets/Scene/activities/TinaAndJun_Act4.unity
+    guid: 5ac7e67b69569ea4f910e14c1a61b46d
+  - enabled: 1
+    path: Assets/Scene/activities/TinaAndJun_Act5.unity
+    guid: 5836ec43611191142be10d452c35308b
+  - enabled: 1
+    path: Assets/Scene/activities/TinaAndJun_Act6.unity
+    guid: a418356dcbb80a549b714c5e9cefc9a4
+  - enabled: 1
+    path: Assets/Scene/activities/TinaAndJun_Act7.unity
+    guid: 3ffa8b3fc6efc1d4fa6465219418ba96
+  - enabled: 1
+    path: Assets/Scene/activities/whatDidYaSee_act1.unity
+    guid: 065a6b4cc13f7534aaf0108b7b924be6
+  - enabled: 1
+    path: Assets/Scene/activities/whatDidYaSee_act2.unity
+    guid: 3e6c87cb26a055c4592ba2fc132c7b5f
+  - enabled: 1
+    path: Assets/Scene/activities/WhatDidYouSeeAct3.unity
+    guid: a3a9ce02f9450bb43b99d6c30654f7df
+  - enabled: 1
+    path: Assets/Scene/activities/WhatDidYouSeeAct4.unity
+    guid: 58f064391e97ccc4ab38ed99a93f9402
+  - enabled: 1
+    path: Assets/Scene/activities/WhatDidYouSeeAct5.unity
+    guid: b75ea43d291c5604585b31b1d49a1ab6
+  - enabled: 1
+    path: Assets/Scene/activities/WhatDidYouSeeAct6.unity
+    guid: a90008543eb15894eab17a1bc6903ab3
+  - enabled: 1
+    path: Assets/Scene/activities/WhatDidYouSeeAct7.unity
+    guid: 0ffc83dc076b0494387a98e1263e20e8
+  - enabled: 1
+    path: Assets/Scene/activities/WhatDidYouSeeAct8.unity
+    guid: 006561dab05558f449c2ed6698082f81
+  - enabled: 1
+    path: Assets/Scene/activities/yummyShapes_Act_1.unity
+    guid: 78335261eb8461e4cb3b2924435699f0
+  - enabled: 1
+    path: Assets/Scene/activities/yummyShapes_Act_2.unity
+    guid: fe1294e0df7d61f4785c77756313b5c1
+  - enabled: 1
+    path: Assets/Scene/activities/yummyShapes_Act_3.unity
+    guid: aecab9a4b7b4aad419e3e3034fe48b84
+  - enabled: 1
+    path: Assets/Scene/activities/yummyShapes_Act_4.unity
+    guid: a7db23d9109497344a0440903e278016
+  - enabled: 1
+    path: Assets/Scene/activities/yummyShapes_Act_5.unity
+    guid: 71b09b4eedd144eadb1d743b34b42b08
+  - enabled: 1
+    path: Assets/Scene/activities/yummyShapes_Act_6.unity
+    guid: 21e9d8dbfcc7147459bc9e26141c96db
+  - enabled: 1
+    path: Assets/Scene/activities/yummyShapes_Act_7.unity
+    guid: 590e8ef89467a094d8298709b37ffcfa
+  - enabled: 1
+    path: Assets/Scene/empty.unity
+    guid: 5c3fb1cdff8874c3396a1e9d7a0c8b30
