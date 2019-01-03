@@ -12,12 +12,19 @@ using System.Collections.Generic;
 
 using SQLite4Unity3d;
 using System;
+using SFB;
 
 public class ClientSendFile : MonoBehaviour
 {
     // kit
     [SerializeField]
     UnityEngine.UI.Text txtTest;
+    [SerializeField]
+    UnityEngine.UI.Text txtData;
+    [SerializeField]
+    UnityEngine.UI.Button btnSave;
+
+    string importedData;
 
     public enum MessageGroup
     {
@@ -26,7 +33,8 @@ public class ClientSendFile : MonoBehaviour
         Book_UpdateReadCount = 4,
         Book_UpdateReadToMeCount = 5,
         Book_UpdateAutoReadCount = 6,
-        Sync = 7
+        Sync = 7,
+        CSV = 9
     }
 
     Queue<NetworkData> networkQueue;
@@ -40,8 +48,18 @@ public class ClientSendFile : MonoBehaviour
 
         // create database connection
         //dataService = new DataService();
+        btnSave.onClick.AddListener(Save);
     }
     
+    private void Save()
+    {
+        if (txtData.text == null || txtData.text == "")
+            return;
+
+        string path = StandaloneFileBrowser.SaveFilePanel("Save File", "", "", "csv");
+        File.WriteAllText(path, importedData, System.Text.Encoding.Default);
+    }
+
     private void ReceiveFile(NetworkingPlayer player, Binary frame, NetWorker sender)
     {
         Debug.Log("frame group id:" + frame.GroupId);
@@ -52,7 +70,8 @@ public class ClientSendFile : MonoBehaviour
         frame.GroupId != MessageGroupIds.START_OF_GENERIC_IDS + (int)MessageGroup.Book_UpdateReadToMeCount &&
         frame.GroupId != MessageGroupIds.START_OF_GENERIC_IDS + (int)MessageGroup.Insert &&
         frame.GroupId != MessageGroupIds.START_OF_GENERIC_IDS + (int)MessageGroup.Update &&
-        frame.GroupId != MessageGroupIds.START_OF_GENERIC_IDS + (int)MessageGroup.Sync)
+        frame.GroupId != MessageGroupIds.START_OF_GENERIC_IDS + (int)MessageGroup.Sync &&
+        frame.GroupId != MessageGroupIds.START_OF_GENERIC_IDS + (int)MessageGroup.CSV)
             return;
 
         // sync message
@@ -123,6 +142,21 @@ public class ClientSendFile : MonoBehaviour
             //    Debug.Log("Student model, student count " + networkModel.lstStudentModel.Count);
             //    Debug.Log("Sync exit");
             //});
+        }
+        else if(frame.GroupId == MessageGroupIds.START_OF_GENERIC_IDS + (int)MessageGroup.CSV)
+        {
+            Debug.Log("CSV");
+            MainThreadManager.Run(() =>
+            {
+                //System.Text.Encoding enc = System.Text.Encoding.Default;
+                //importedData = enc.GetString(frame.StreamData.CompressBytes());   
+                importedData = System.Text.Encoding.UTF8.GetString(frame.StreamData.CompressBytes());
+                Debug.Log("data length " + frame.StreamData.CompressBytes().Length);
+                importedData = importedData.Remove(importedData.Length - 8);
+                Debug.Log("got data!\n" + importedData);
+                txtData.text = importedData;
+                btnSave.interactable = true;
+            });
         }
         else
         {

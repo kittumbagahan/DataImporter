@@ -18,9 +18,9 @@ public class DataImportNetwork : MonoBehaviour
     //public InputField portNumber = null;
     public bool DontChangeSceneOnConnect = false;
     public string masterServerHost = string.Empty;
-    public ushort masterServerPort = 14940;
+    public ushort masterServerPort = 12940;
     public string natServerHost = string.Empty;
-    public ushort natServerPort = 14941;
+    public ushort natServerPort = 12941;
     public bool connectUsingMatchmaking = false;
     public bool useElo = false;
     public int myElo = 0;
@@ -41,7 +41,7 @@ public class DataImportNetwork : MonoBehaviour
 
     // kit
     [SerializeField]
-    private ushort mPort = 14937;
+    private ushort mPort = 12937;
     private string mIpAddress = "127.0.0.1";
     [SerializeField] Button btnReceiver, btnSender;
     ClientSendFile mClientSendFile;
@@ -201,8 +201,7 @@ public class DataImportNetwork : MonoBehaviour
 
     private void Server_playerAccepted (NetworkingPlayer player, NetWorker sender)
     {
-        Debug.Log ("player is accepted");
-        clientSendFile.SendDatabase (Application.persistentDataPath + "/" + DataService.DbName ());
+        Debug.Log ("player is accepted");        
     }
 
     private void Server_disconnected (NetWorker sender)
@@ -372,18 +371,20 @@ public class DataImportNetwork : MonoBehaviour
 
     public void AsSender ()
     {
-        btnReceiver.GetComponent<Button> ().interactable = false;
-        btnSender.GetComponentInChildren<Text> ().text = "Stop";
+        if (btnReceiver != null)
+            btnReceiver.GetComponent<Button>().interactable = false;
+        if (btnSender != null)
+            btnSender.GetComponentInChildren<Text>().text = "Stop";
 
-        btnSender.onClick.RemoveAllListeners ();
-        btnSender.onClick.AddListener (() =>
+        btnSender.onClick.RemoveAllListeners();
+        btnSender.onClick.AddListener(() =>
         {
-            StopCoroutine ("_FindServer");
-            ResetNetwork ();
+            StopCoroutine("_FindServer");
+            ResetNetwork();
             //            StopCoroutine("_FindServerLoading");            
         });
 
-        StartCoroutine ("_FindServer");
+        StartCoroutine("_FindServer");
     }
 
     WaitForSeconds wfs = new WaitForSeconds (1.5f);
