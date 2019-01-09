@@ -269,7 +269,7 @@ public class DataImportNetwork : MonoBehaviour
         if (networker is IServer)
         {                     
             // kit, is server
-            btnReceiver.GetComponentInChildren<TextMeshProUGUI> ().text = "Stop";
+            btnReceiver.GetComponentInChildren<TextMeshProUGUI> ().text = "Disconnect";
             btnReceiver.onClick.RemoveAllListeners ();
             btnReceiver.onClick.AddListener (Quit);
             Debug.Log ("Connected as server");
@@ -330,9 +330,9 @@ public class DataImportNetwork : MonoBehaviour
         }
 
         if (btnSender != null)
-            btnSender.GetComponentInChildren<TextMeshProUGUI> ().text = "Send";
+            btnSender.GetComponentInChildren<TextMeshProUGUI> ().text = "Connect";
         if (btnReceiver != null)
-            btnReceiver.GetComponentInChildren<TextMeshProUGUI> ().text = "Receive";
+            btnReceiver.GetComponentInChildren<TextMeshProUGUI> ().text = "Connect";
     }
 
     private void OnEnable ()
