@@ -153,7 +153,7 @@ public class ClientSendFile : MonoBehaviour
                 importedData = System.Text.Encoding.UTF8.GetString(frame.StreamData.CompressBytes());
                 Debug.Log("data length " + frame.StreamData.CompressBytes().Length);
                 importedData = importedData.Remove(importedData.Length - 8);
-                Debug.Log("got data!\n" + importedData);
+                MessageBox.ins.ShowOk("Data Downloaded", MessageBox.MsgIcon.msgInformation, null);                
                 txtData.text = importedData;
                 btnSave.interactable = true;
             });
