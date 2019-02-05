@@ -19,8 +19,8 @@ public class ClientSendFile : MonoBehaviour
     // kit
     [SerializeField]
     UnityEngine.UI.Text txtTest;
-    [SerializeField]
-    UnityEngine.UI.Text txtData;
+    //[SerializeField]
+    //UnityEngine.UI.Text txtData;
     [SerializeField]
     UnityEngine.UI.Button btnSave;
 
@@ -53,7 +53,7 @@ public class ClientSendFile : MonoBehaviour
     
     private void Save()
     {
-        if (txtData.text == null || txtData.text == "")
+        if (importedData == null || importedData == "")
             return;
 
         string path = StandaloneFileBrowser.SaveFilePanel("Save File", "", "", "csv");
@@ -152,9 +152,10 @@ public class ClientSendFile : MonoBehaviour
                 //importedData = enc.GetString(frame.StreamData.CompressBytes());   
                 importedData = System.Text.Encoding.UTF8.GetString(frame.StreamData.CompressBytes());
                 Debug.Log("data length " + frame.StreamData.CompressBytes().Length);
+                Debug.Log("Data " + importedData);
                 importedData = importedData.Remove(importedData.Length - 8);
                 MessageBox.ins.ShowOk("Data Downloaded", MessageBox.MsgIcon.msgInformation, null);                
-                txtData.text = importedData;
+                //txtData.text = importedData;
                 btnSave.interactable = true;
             });
         }
@@ -429,69 +430,7 @@ public class ClientSendFile : MonoBehaviour
         else
             ((TCPServer)networker).SendAll (frame);        
     }
-    NetworkModel networkModel;
-    //public void SendDatabase2()
-    //{
-    //    //NetworkModel networkModel = new NetworkModel();
-
-    //    DataService ds = new DataService();
-    //    SQLiteCommand command = ds._connection.CreateCommand("select * from ActivityModel");
-
-    //    networkModel.lstActivityModel = command.ExecuteQuery<ActivityModel>();
-
-    //    command = ds._connection.CreateCommand("select * from StudentModel");
-    //    networkModel.lstStudentModel = command.ExecuteQuery<StudentModel>();
-
-    //    ds._connection.Close();
-
-    //    // Throw an error if this is not the server
-    //    var networker = NetworkManager.Instance.Networker;
-
-    //    // event when file is sent        
-
-    //    if (!networker.IsServer)
-    //    {
-    //        Debug.LogError("Only the client can send files in this example!");
-    //        return;
-    //    }
-
-    //    byte[] allData = { };
-
-
-    //    // convert pData as byte[]
-    //    BinaryFormatter binFormatter = new BinaryFormatter();
-    //    MemoryStream memStream = new MemoryStream();
-    //    binFormatter.Serialize(memStream, networkModel);
-
-    //    allData = memStream.ToArray();
-
-    //    Debug.Log("allData " + allData.Length);
-
-    //    //        // Prepare a byte array for sending
-    //    //        BMSByte allData = new BMSByte();        
-    //    //
-    //    //        // Add the file name to the start of the payload        
-    //    //        ObjectMapper.Instance.MapBytes(allData);        
-
-    //    // Send the file to all connected clients
-    //    Binary frame = new Binary(
-    //        networker.Time.Timestep,                    // The current timestep for this frame
-    //        false,                                      // We are server, no mask needed
-    //        allData,                                    // The file that is being sent
-    //        Receivers.Others,                           // Send to all clients
-    //        MessageGroupIds.START_OF_GENERIC_IDS + (int)MessageGroup.Sync,   // Some random fake number
-    //        networker is TCPServer);
-
-    //    //        if (networker is UDPServer)
-    //    //            ((UDPServer)networker).Send(frame, true);
-    //    //        else
-    //    //            ((TCPServer)networker).SendAll(frame);
-
-    //    if (networker is UDPClient)
-    //        ((UDPClient)networker).Send(frame, true);
-    //    else
-    //        ((TCPClient)networker).Send(frame);
-    //}
+    NetworkModel networkModel;    
 
     NetworkData ConvertToObject(byte[] byteData)
 	{
@@ -538,8 +477,8 @@ public class ClientSendFile : MonoBehaviour
             };
             DataService._connection.Insert (studentBookModel);
 
-            return true;
             DataService.Close();
+            return true;            
         }
         else
         {
